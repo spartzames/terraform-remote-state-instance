@@ -11,7 +11,7 @@ data "terraform_remote_state" "remote_state" {
 
 output "remote_state_output" {
   value       = data.terraform_remote_state.remote_state
-  description = "The Private_ip of the Instance"
+  description = "remote_state_output"
 }
 
 resource "aws_security_group" "resource-tagging-lab-kthong" {
@@ -26,17 +26,17 @@ resource "aws_instance" "ec2_kthong" {
   vpc_security_group_ids = [aws_security_group.resource-tagging-lab-kthong.id]
 }
 
-output "hr_ec2_kthong_public_ip" {
+output "ec2_kthong_public_ip" {
   value       = aws_instance.ec2_kthong.public_ip
   description = "The public IP of the Instance"
 }
 
-output "hr_ec2_kthong_public_dns" {
+output "ec2_kthong_public_dns" {
   value       = aws_instance.ec2_kthong.public_dns
   description = "The Public dns of the Instance"
 }
 
-output "hr_ec2_kthong_private_ip" {
+output "ec2_kthong_private_ip" {
   value       = aws_instance.ec2_kthong.private_ip
   description = "The Private_ip of the Instance"
 }
