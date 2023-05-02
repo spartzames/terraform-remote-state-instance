@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "${var.aws_kthong_region}"
+  region = "${var.choi_region}"
 }
 
 terraform {
@@ -13,6 +13,6 @@ terraform {
 
 variable "aws_kthong_region" {
   type = string
-  default = "kthongkthong"
+  default = "ap-southeast-2"
   description = "variable for aws region"
 }
