@@ -1,5 +1,5 @@
 provider "aws" {
-  region = terraform.variable.aws_kthong_region
+  region = local.aws_kthong_region
 }
 
 terraform {
@@ -9,10 +9,4 @@ terraform {
         version = "~> 4.0"
     }
   }
-}
-
-variable "aws_kthong_region" {
-  type = string
-  default = "kthongkthong"
-  description = "variable for aws region"
 }
