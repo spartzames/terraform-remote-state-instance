@@ -1,5 +1,5 @@
 provider "aws" {
-  region = local.aws_region
+  region = "${var.aws_kthong_region}"
 }
 
 terraform {
@@ -11,6 +11,8 @@ terraform {
   }
 }
 
-locals {
-  aws_region = var.aws_kthong_region
+variable "aws_kthong_region" {
+  type = string
+  default = "kthongkthong"
+  description = "variable for aws region"
 }
