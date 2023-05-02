@@ -1,0 +1,1 @@
+aws_kthong_region = ${TF_VAR_aws_kthong_region}
