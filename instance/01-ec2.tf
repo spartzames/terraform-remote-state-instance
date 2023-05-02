@@ -15,7 +15,7 @@ output "remote_state_output" {
 }
 
 resource "aws_security_group" "resource-tagging-lab-kthong" {
-  name = "resource-tagging-lab-kthong"
+  name = var.aws_kthong_sg_name
   vpc_id = data.terraform_remote_state.remote_state.outputs.output_vpc_kthong.id
 }
 
