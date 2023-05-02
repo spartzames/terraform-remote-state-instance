@@ -16,3 +16,9 @@ variable "aws_kthong_region" {
   default = "ap-southeast-2"
   description = "variable for aws region"
 }
+
+variable "choi_region" {
+  type = string
+  default = "ap-southeast-3"
+  description = "variable for aws region"
+}
