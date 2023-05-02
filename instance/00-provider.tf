@@ -10,3 +10,8 @@ terraform {
     }
   }
 }
+
+variable "aws_kthong_region" {
+  type = string
+  description = "variable for aws region"
+}
