@@ -1,5 +1,5 @@
 provider "aws" {
-  region = local.aws_kthong_region
+  region = local.aws_region
 }
 
 terraform {
@@ -9,4 +9,8 @@ terraform {
         version = "~> 4.0"
     }
   }
+}
+
+locals {
+  aws_region = var.aws_kthong_region
 }
