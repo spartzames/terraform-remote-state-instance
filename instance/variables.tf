@@ -1,4 +1,4 @@
 variable "aws_kthong_region" {
   type = string
-  default = "ap-southeast-2"
+  description = "input variable for aws region"
 }
